@@ -1,0 +1,84 @@
+<html>
+<head><title>Menu</title>
+<style>
+    
+    
+        
+
+   
+a{color:white;
+
+}
+    
+
+
+
+
+
+
+
+
+body{background:linear-gradient(-45deg,red,aqua,blue,orange);
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    height:100vh;
+    font-family: Arial, sans-serif;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+ul li{
+    font-size: 28px;
+    color:white;
+    margin: 20px 0;
+    padding: 15px 40px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.4s;
+    border: 2px solid #00f7ff;
+    border-radius: 30px;
+    text-align: center;
+}
+
+ul li:hover{
+    color:black;
+    background:#00f7ff;
+    box-shadow: 0 0 50px #00f7ff,
+                0 0 50px #00f7ff,
+                0 0 50px #00f7ff;
+    transform: scale(1.1);
+}
+
+
+@keyframes float{
+    0%{ transform: translateY(0px); }
+    50%{ transform: translateY(-15px); }
+    100%{ transform: translateY(0px); }
+}
+
+ul li{
+    animation: float 3s ease-in-out infinite;
+}
+
+</style>
+
+<body>
+<ul>
+
+<h1>Menu</h1>
+
+<p><a href="MAIN HTML NNN.html" Target="left"><li>HTML</li></a></p>
+
+<p><a href="LINK PROGRAM.html" Target="left"><li>program</li></a></p>
+
+<p><a href="ALL LINK.html" Target="left"><li>All Link</li></a></p></ul>
+</body>
+</html>
+
+
+

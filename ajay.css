@@ -1,0 +1,82 @@
+/* Reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(-45deg,blue,green,red);
+
+}
+
+/* Card */
+.card{
+    position:relative;
+    width:300px;
+    padding:30px;
+    text-align:center;
+    color:#fff;
+    border-radius:16px;
+    background:linear-gradient(135deg,#1f1f2e,#12121a);
+    animation: float 4s ease-in-out infinite;
+    overflow:hidden;
+}
+
+/* Gradient Border Animation */
+.card::before{
+    content:"";
+    position:absolute;
+    inset:-2px;
+    border-radius:18px;
+    background:linear-gradient(
+        90deg,
+        #00f5ff,
+        #7cff00,
+        #ff00d4,
+        #00f5ff
+    );
+    background-size:300% 300%;
+    animation:borderMove 6s linear infinite;
+    z-index:-1;
+}
+
+/* Glow Effect */
+.card::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    border-radius:16px;
+    background:inherit;
+    filter:blur(18px);
+    opacity:0.6;
+    z-index:-2;
+}
+
+/* Text Animation */
+.card h2{
+    margin-bottom:10px;
+    animation: glowText 2.5s ease-in-out infinite alternate;
+}
+
+/* Animations */
+@keyframes float{
+    0%{ transform:translateY(0); }
+    50%{ transform:translateY(-12px); }
+    100%{ transform:translateY(0); }
+}
+
+@keyframes borderMove{
+    0%{ background-position:0% 50%; }
+    100%{ background-position:300% 50%; }
+}
+
+@keyframes glowText{
+    from{ text-shadow:0 0 5px #00f5ff; }
+    to{ text-shadow:0 0 20px #00f5ff, 0 0 40px #00f5ff; }
+}
